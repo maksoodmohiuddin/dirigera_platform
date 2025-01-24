@@ -28,31 +28,28 @@ class ikea_outlet_mock(SwitchEntity):
         return self._unique_id
 
     @property
-    def device_info(self) -> DeviceInfo:
-        return DeviceInfo(
-            identifiers={("dirigera_platform", self._unique_id)},
-            name=self._name,
-            manufacturer=self._manufacturer,
-            model=self._model,
-            sw_version=self._sw_version,
-        )
-
-    @property
-    def name(self) -> str:
+    def name(self):
         return self._name
 
     @property
     def is_on(self):
         return self._is_on
 
-    def turn_on(self):
+    def turn_on(self, **kwargs):
         self._is_on = True
 
-    def turn_off(self):
+    def turn_off(self, **kwargs):
         self._is_on = False
 
-    def update(self):
-        pass
-
-    async def async_will_remove_from_hass(self) -> None:
-        ikea_outlet_mock.counter = ikea_outlet_mock.counter - 1
+# Test block to run the file directly
+if __name__ == "__main__":
+    mock_hub = None  # Replace with actual hub object if available
+    mock_hub_outlet = None  # Replace with actual hub outlet object if available
+    outlet = ikea_outlet_mock(mock_hub, mock_hub_outlet)
+    print(f"Outlet Name: {outlet.name}")
+    print(f"Outlet Unique ID: {outlet.unique_id}")
+    print(f"Is Outlet On? {outlet.is_on}")
+    outlet.turn_on()
+    print(f"Is Outlet On after turning on? {outlet.is_on}")
+    outlet.turn_off()
+    print(f"Is Outlet On after turning off? {outlet.is_on}")
