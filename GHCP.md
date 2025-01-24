@@ -137,7 +137,7 @@ Donation to above will go to [Samriddhi Foundation](https://www.samriddhifoundat
 <a href="https://www.buymeacoffee.com/sanjoyg" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Setup
-```ython3 -m venv venv```
+```python3 -m venv venv```
 ```source venv/bin/activate```  
 
 On Windows use
@@ -152,12 +152,12 @@ On Windows use
 http://localhost:8123
 
 
-## test 
+## Test 
 Run `pytest` from dirigera_platform directory
 e.g., 
 ```pytest -p no:warnings -s```
 
-## sample prompt 
-```Using the guidelines listed on #file: prompt-library-unit-testing-
+## Sample Prompt 
+```Using the guidelines listed on file: prompt-library-unit-testing-
 python.md
 Create unit tests for ikea_outlet_lock using pytest```
