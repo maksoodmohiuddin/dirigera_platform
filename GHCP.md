@@ -137,14 +137,17 @@ Donation to above will go to [Samriddhi Foundation](https://www.samriddhifoundat
 <a href="https://www.buymeacoffee.com/sanjoyg" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## Setup
-python3 -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```ython3 -m venv venv```
+```source venv/bin/activate```  
 
-pip install -r custom_components/dirigera_platform/requirements.txt
+On Windows use
+```venv\Scripts\activate```
 
-pip install homeassistant
+```pip install -r custom_components/dirigera_platform/requirements.txt```
 
-hass --open-ui
+```pip install homeassistant```
+
+```hass --open-ui```
 
 http://localhost:8123
 
@@ -152,4 +155,9 @@ http://localhost:8123
 ## test 
 Run `pytest` from dirigera_platform directory
 e.g., 
-pytest -p no:warnings -s
+```pytest -p no:warnings -s```
+
+## sample prompt 
+```Using the guidelines listed on #file: prompt-library-unit-testing-
+python.md
+Create unit tests for ikea_outlet_lock using pytest```

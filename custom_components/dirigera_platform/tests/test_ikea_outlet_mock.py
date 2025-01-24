@@ -36,3 +36,24 @@ def test_ikea_outlet_turn_off(mock_hub, mock_hub_outlet):
     outlet = ikea_outlet_mock(mock_hub, mock_hub_outlet)
     outlet.turn_off()
     assert outlet.is_on is False
+
+def test_ikea_outlet_initial_state(mock_hub, mock_hub_outlet):
+    outlet = ikea_outlet_mock(mock_hub, mock_hub_outlet)
+    assert outlet.is_on is False
+
+def test_ikea_outlet_turn_on(mock_hub, mock_hub_outlet):
+    outlet = ikea_outlet_mock(mock_hub, mock_hub_outlet)
+    outlet.turn_on()
+    assert outlet.is_on is True
+
+def test_ikea_outlet_turn_off(mock_hub, mock_hub_outlet):
+    outlet = ikea_outlet_mock(mock_hub, mock_hub_outlet)
+    outlet.turn_on()
+    outlet.turn_off()
+    assert outlet.is_on is False
+
+def test_ikea_outlet_multiple_instances(mock_hub, mock_hub_outlet):
+    outlet1 = ikea_outlet_mock(mock_hub, mock_hub_outlet)
+    outlet2 = ikea_outlet_mock(mock_hub, mock_hub_outlet)
+    assert outlet1.unique_id != outlet2.unique_id
+    assert outlet1.name != outlet2.name
