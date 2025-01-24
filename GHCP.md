@@ -153,7 +153,7 @@ http://localhost:8123
 
 
 ## Test 
-Run `pytest` from dirigera_platform directory
+Run ```pytest``` from dirigera_platform directory
 e.g., 
 ```pytest -p no:warnings -s```
 
