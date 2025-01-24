@@ -158,6 +158,6 @@ e.g.,
 ```pytest -p no:warnings -s```
 
 ## Sample Prompt 
-```Using the guidelines listed on file: prompt-library-unit-testing-
-python.md
-Create unit tests for ikea_outlet_lock using pytest```
+
+```Using the guidelines listed on file prompt-library-unit-testing-
+python.md create unit tests for ikea_outlet_lock using pytest```
